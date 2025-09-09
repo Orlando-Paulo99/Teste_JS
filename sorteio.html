@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 600px;
+            text-align: center;
+            margin-top: 20%;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: lightblue;
+            position: relative;
+            left: 25%;
+            margin-top: 10%;
+            
+        }
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: lightgreen;
+        }
+        p{
+            font-size: 25px;
+            font-weight: bold;
+            color: darkblue;
+        }
+       h1{
+            color: darkblue;
+            margin-bottom: 30px;
+            font-size: 30px;
+            font-weight: bold;
+            
+       }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">   
+
+        <h1> Sorteio de um numero aleatorio entre 0 e 100</h1>
+
+        <button onclick="sorteio()"> clique aqui</button>
+        <p id="ap"> O numero sorteado irá apresentar aqui</p>
+    </div>
+</body>
+
+<script>
+    
+    let ap = document.getElementById("ap")
+
+
+    function sorteio(){
+
+        // gerar numero aleatorio
+        //math random ele gera um numero entre 0 e 1
+        // math floor ele arredonda o numero para baixo 
+        let num = Math.floor(Math.random() * 100)
+        ap.innerHTML = "o numero sorteado foi " + num
+    }
+    
+</script>
+
+</html>
