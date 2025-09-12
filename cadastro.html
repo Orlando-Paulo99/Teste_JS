@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+
+    <style>
+        .container{
+            width: 600px;
+            text-align: center;
+            margin-top: 20%;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: lightblue;
+            position: relative;
+            left: 25%;
+            margin-top: 10%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="">login</label>
+        <input type="email" id="login" placeholder="login">
+        <label for="">senha</label>
+        <input type="password" id="senha" placeholder="senha">
+        <input type="password" id="c_senha" placeholder="confirme a senha">
+        <button>cadastar</button>
+    </div>
+</body>
+
+<script>
+
+    let usuario=document.getElementById("login")
+    let pin=document.getElementById("senha")
+    let c_senha=document.getElementById("c_senha")
+
+
+    if(senha===c_senha){
+        alert('cadastro realizado com sucesso /n' +"bem vindo,"+ usuario)
+    }
+    else{
+        alert("as senhas não estão iguais")
+    }
+
+
+
+</script>
+
+</html>
