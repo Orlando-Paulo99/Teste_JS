@@ -14,12 +14,54 @@
             border: 2px solid black;
             padding: 20px;
             border-radius: 15px;
-            background-color: lightblue;
+            background-color: #000814;
             position: relative;
             left: 25%;
             margin-top: 10%;
+            height: 300px;
+            display:grid;
 
         }
+
+        input {
+            width: 290px;
+            position: relative;
+            left: 30%;
+            height: 29px;
+            border-radius: 10px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid black;
+            position: relative;
+            left: 45%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        label {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            left: 5%;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
@@ -29,24 +71,27 @@
         <label for="">senha</label>
         <input type="password" id="senha" placeholder="senha">
         <input type="password" id="c_senha" placeholder="confirme a senha">
-        <button>cadastar</button>
+        <p id="loading"></p>
+        <button onclick="cadastro()">cadastrar</button>
     </div>
 </body>
 
 <script>
 
-    let usuario=document.getElementById("login")
-    let pin=document.getElementById("senha")
-    let c_senha=document.getElementById("c_senha")
+    function cadastro() {
+      let usuario = document.getElementById("login").value;
+      let senha = document.getElementById("senha").value;
+      let c_senha = document.getElementById("c_senha").value;
+      let acesso = document.getElementById("loading");
 
-
-    if(senha===c_senha){
-        alert('cadastro realizado com sucesso /n' +"bem vindo,"+ usuario)
+      if (senha === c_senha) {
+        acesso.innerHTML = "Cadastro realizado com sucesso!\nBem-vindo, " + usuario;
+      } else {
+        acesso.innerHTML = "As senhas estão diferentes!";
+      }
     }
-    else{
-        alert("as senhas não estão iguais")
-    }
 
+    
 
 
 </script>
