@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dadinho</title>
+
+        <style>
+     
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: aliceblue;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+
+        div{
+            width: 600px;
+            text-align: center;
+            margin-top: 20%;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: black;
+            position: relative;
+            left: 25%;
+            margin-top: 10%;
+            height: 400px;
+            
+        }
+
+        
+        
+        button {
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: lightgreen;
+            margin-top: 20px;
+            
+        }
+        </style>
+
+</head>
+<body>
+    <div>
+        <h1>Sorteio do Dadinho</h1>
+        <img src="/img_Dado/face1.png" alt="" id="alterar"> <br>
+        <button id="girar" onclick="sorteiaDado()">Clique aqui</button>
+    </div>
+</body>
+<script>
+
+function sorteiaDado(){
+   
+
+    //math.random gera numero aleatorio entre 0 e 1
+    //math.random * 6 gera numero entre 0 e 5.9999
+    //math.floor arredonda para baixo
+    //math.floor(math.random * 6) + 1 gera numero entre 1 e 6
+    //switch case para trocar a imagem conforme o numero sorteado
+    switch(Math.floor(Math.random() * 6) + 1){
+        case 1:
+            document.getElementById("alterar").src = "/img_Dado/face1.png"
+            break;
+        case 2:
+            document.getElementById("alterar").src = "/img_Dado/face2.png"
+            break;
+        case 3:
+            document.getElementById("alterar").src = "/img_Dado/face3.png"
+            break;
+        case 4:
+            document.getElementById("alterar").src = "/img_Dado/face4.png"
+            break;
+        case 5:
+            document.getElementById("alterar").src = "/img_Dado/face5.png"
+            break;
+        case 6:
+            document.getElementById("alterar").src = "/img_Dado/face6.png"
+            break;
+    }
+
+
+}
+
+
+</script>
+
+
+</html>
